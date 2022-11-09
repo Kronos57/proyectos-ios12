@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,18 +15,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ruby-image" translatesAutoresizingMaskIntoConstraints="NO" id="lHN-iM-hWY">
+                                <rect key="frame" x="107" y="363" width="200" height="170"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ps-tZ-N5f">
+                                <rect key="frame" x="32" y="633" width="350" height="60"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Púlsame y serás Rico!!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPushPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KWo-e5-kcZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'AM RICH" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5Q-ny-Pcr">
+                                <rect key="frame" x="98.333333333333329" y="200.33333333333334" width="217.66666666666669" height="62.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="0.44864912222552772" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="-2" height="-1"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.23895783993862096" green="0.037024688927615408" blue="0.063143966951196825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8ps-tZ-N5f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7gb-CF-Ggg"/>
+                            <constraint firstItem="lHN-iM-hWY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ExB-OB-CkY"/>
+                            <constraint firstItem="lHN-iM-hWY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NXW-hZ-ida"/>
+                            <constraint firstItem="a5Q-ny-Pcr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SJu-3e-s2L"/>
+                            <constraint firstItem="lHN-iM-hWY" firstAttribute="top" secondItem="a5Q-ny-Pcr" secondAttribute="bottom" constant="100" id="bMG-Zs-dTw"/>
+                            <constraint firstItem="8ps-tZ-N5f" firstAttribute="top" secondItem="lHN-iM-hWY" secondAttribute="bottom" constant="100" id="bwt-pZ-6mJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnPush" destination="8ps-tZ-N5f" id="wmD-jJ-y04"/>
+                        <outlet property="imgDiamond" destination="lHN-iM-hWY" id="z2i-CE-fME"/>
+                        <outlet property="lblTitle" destination="a5Q-ny-Pcr" id="EW1-gi-z0X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16" y="56"/>
+            <point key="canvasLocation" x="-17.39130434782609" y="55.580357142857139"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="ruby-image" width="200" height="170"/>
     </resources>
 </document>
